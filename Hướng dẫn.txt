@@ -1,0 +1,7 @@
+1. Vào chạy setup để cài đặt phần mềm. Sau khi cài xong thì đừng mở phần mềm.
+Lúc cài xong có cái dấu TICK mở phần mềm, bạn không đọc mà bấm Finish phát là toang luôn đấy.
+2. Chép toàn bộ những gì bạn thấy trong folder Crack vào thư mục phần mềm sau khi đã cài đặt
+3. Chạy file Express2BusinessFix trong thư mục Crack
+4. Xong
+
+* Vì dễ quá nên mình không làm Video hướng dẫn. Nếu bạn không hiểu bạn có thể yêu cầu mình làm Video
