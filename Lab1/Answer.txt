@@ -1,0 +1,26 @@
+Answer question:
+Question 1: What happens if users choose “Cancel”?
+- Khi người dùng chọn tùy chọn "Canel", hộp thoại thông báo sẽ hiện lên dòng thông báo:
+"You've chosen: No
+- Giải thích: Method JOptionPane.showConfirmDialog sẽ trả về 1 giá trị kiểu int phụ thuộc vào lựa chọn của người dùng.
+Khi người dùng chọn yes, giá trị của option sẽ được gán bằng 1 int đại diện cho lựa chọn yes.
+- Sau đó, trong biểu thức so sánh option==JOptionPane.YES_OPTION?"Yes":"No" , biểu thức sẽ check xem 
+người dùng có bấm nút Yes không. Nếu 2 giá trị int được trả về của JOptionPane.YES_OPTION và option bằng nhau
+thì chuỗi "Yes" sẽ được chọn để đưa ra màn hình. Ngược lại, nếu khác nhau thì chuỗi "No" sẽ được in ra.
+- Khi bấm nút Cancel thì giá trị của option sẽ khác với JOptionPane.YES_OPTION, nên theo biểu thức điều kiện, chuỗi "No" sẽ được in ra.
+Question 2:How to customize the options to users, e.g. only two options: “Yes” and “No”, OR “I do” and “I don’t”
+Để thay đổi các options của người dùng chỉ gồm "Yes" và "No", ta sẽ thay đổi các Parameters trong method JOptionPane.showConfirmDialog
+như sau: JOptionPane.showConfirmDialog(null, "Do you want to change to the frist class ticket?","Choose yes or no",JOptionPane.YES_NO_OPTION)
+Với “I do” and “I don’t”, ta thay đổi như sau:
+- Tạo mảng chứa các nút tùy chỉnh: Object[] options = {"I Do", "I Don't"}
+- Sử dụng method JOptionPane.showOptionDialog để tạo hộp thoại tùy chỉnh
+int option = JOptionPane.showOptionDialog(
+            null, 
+            "Do you want to change to the first class ticket?", // Thông điệp
+            "Ticket Confirmation",                             // Tiêu đề
+            JOptionPane.YES_NO_OPTION,                         // Loại hộp thoại (Yes/No)
+            JOptionPane.QUESTION_MESSAGE,                      // Kiểu biểu tượng (biểu tượng câu hỏi)
+            null,                                              // Biểu tượng tùy chỉnh (null dùng biểu tượng mặc định)
+            options,                                           // Mảng chứa các lựa chọn
+            options[0]                                         // Lựa chọn mặc định
+        );
